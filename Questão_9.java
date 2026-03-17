@@ -1,12 +1,15 @@
 package lista_1;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Questão_9 {
 
 	public static void main(String[] args) {
 		
 		Scanner s = new Scanner (System.in);
+
+		DecimalFormat df = new DecimalFormat ("00,00");
 		
 		System.out.println("Digite 5 valores pertencentes ao conjunto dos números inteiros para calcular a média entre eles ");
 		
@@ -28,7 +31,7 @@ public class Questão_9 {
 		int media = (v1 + v2 + v3 + v4 + v5)/5;
 		
 		if (v1 < 0 || v1 > 0 && v2 < 0 || v2 > 0 && v3 < 0 || v3 > 0 && v4 < 0 || v4 > 0 && v5 < 0 || v5 > 0 ) {
-		 System.out.println("A média é igual a: " + media);
+		 System.out.println("A média é igual a: " + dr.format(media));
 		}
 		if (media < v1 ) {
 		System.out.println(" Valor 1 = " + v1 + " é maior que a média apurada.");
